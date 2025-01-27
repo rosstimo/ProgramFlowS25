@@ -33,6 +33,21 @@ Module ProgramFlowS25
             Console.WriteLine(myNumber > 4)
         End If
 
+
+        myNumber -= 3
+        'if none of the conditions evaluates to true the Else clause triggers
+        If myNumber > 6 Then
+            Console.WriteLine($"{myNumber} is a big number!")
+        ElseIf myNumber > 3 Then
+            Console.WriteLine($"Sorry not tall enough..")
+        ElseIf myNumber > 4 Then
+            Console.WriteLine($"who cares")
+        Else
+            Console.WriteLine($"Not sure what happened")
+        End If
+
+
+
     End Sub
 
 End Module
