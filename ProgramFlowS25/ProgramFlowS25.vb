@@ -48,33 +48,55 @@ Module ProgramFlowS25
         '    Console.WriteLine($"Not sure what happened")
         'End If
 
-        Do
-            Console.WriteLine("Please enter your age:")
+        'Do
+        '    Console.WriteLine("Please enter your age:")
+        '    userInput = Console.ReadLine()
+
+        '    Try
+        '        myNumber = CInt(userInput)
+        '        Select Case myNumber
+        '            Case 0 To 3
+        '                Console.WriteLine("Where are your parents?")
+        '            Case 4 To 10
+        '                Console.WriteLine("Sorry kid, why don't you try the tea cups...")
+        '            Case 11 To 64
+        '                Console.WriteLine("Enjoy the ride?")
+        '            Case 65 To 99
+        '                Console.WriteLine("Please sign this liability release form.")
+        '            Case > 100
+        '                Console.WriteLine("Someone misplace their mamauh!")
+        '            Case Else
+        '                Console.WriteLine("Well this is weird...")
+        '        End Select
+        '    Catch ex As Exception
+        '        Console.WriteLine($"You entered {userInput}.")
+        '    End Try
+
+        'Loop Until userInput = "Q"
+
+        'Console.WriteLine("Have a nice day!")
+
+
+
+        'userInput = "5"
+
+
+        'Do
+        '    'Console.WriteLine("Type something and press enter:")
+        '    'userInput = Console.ReadLine()
+        '    Console.WriteLine($"In the Do, Loop Until: ")
+        '    userInput = "q"
+        'Loop Until userInput = "Q"
+
+        Do Until userInput = "Q"
+            Console.WriteLine("Type something and press enter:")
             userInput = Console.ReadLine()
+            Console.WriteLine($"In the Do Until, Loop: ")
+        Loop
 
-            Try
-                myNumber = CInt(userInput)
-                Select Case myNumber
-                    Case 0 To 3
-                        Console.WriteLine("Where are your parents?")
-                    Case 4 To 10
-                        Console.WriteLine("Sorry kid, why don't you try the tea cups...")
-                    Case 11 To 64
-                        Console.WriteLine("Enjoy the ride?")
-                    Case 65 To 99
-                        Console.WriteLine("Please sign this liability release form.")
-                    Case > 100
-                        Console.WriteLine("Someone misplace their mamauh!")
-                    Case Else
-                        Console.WriteLine("Well this is weird...")
-                End Select
-            Catch ex As Exception
-                Console.WriteLine($"You entered {userInput}.")
-            End Try
 
-        Loop Until userInput = "Q"
 
-        Console.WriteLine("Have a nice day!")
+
     End Sub
 
 End Module
