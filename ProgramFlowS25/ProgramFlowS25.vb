@@ -1,6 +1,7 @@
 ﻿
 Option Explicit On
 Option Strict On
+Option Compare Text
 
 Module ProgramFlowS25
 
@@ -46,27 +47,34 @@ Module ProgramFlowS25
         'Else
         '    Console.WriteLine($"Not sure what happened")
         'End If
-        Console.WriteLine("Please enter your age:")
-        userInput = Console.ReadLine()
-        myNumber = CInt(userInput)
 
-        Select Case myNumber
-            Case 0 To 3
+        Do
+            Console.WriteLine("Please enter your age:")
+            userInput = Console.ReadLine()
 
-            Case 4 To 10
+            Try
+                myNumber = CInt(userInput)
+                Select Case myNumber
+                    Case 0 To 3
+                        Console.WriteLine("Where are your parents?")
+                    Case 4 To 10
+                        Console.WriteLine("Sorry kid, why don't you try the tea cups...")
+                    Case 11 To 64
+                        Console.WriteLine("Enjoy the ride?")
+                    Case 65 To 99
+                        Console.WriteLine("Please sign this liability release form.")
+                    Case > 100
+                        Console.WriteLine("Someone misplace their mamauh!")
+                    Case Else
+                        Console.WriteLine("Well this is weird...")
+                End Select
+            Catch ex As Exception
+                Console.WriteLine($"You entered {userInput}.")
+            End Try
 
-            Case 11 To 64
+        Loop Until userInput = "Q"
 
-            Case 65 To 99
-
-            Case > 100
-
-            Case Else
-
-        End Select
-
-
-
+        Console.WriteLine("Have a nice day!")
     End Sub
 
 End Module
