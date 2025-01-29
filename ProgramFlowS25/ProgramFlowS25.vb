@@ -99,9 +99,20 @@ Module ProgramFlowS25
             Console.WriteLine(i)
         Next
 
+        Console.WriteLine(StrDup(80, "*"))
+
         For i = 1 To 10 Step 0.5
             Console.WriteLine(i)
         Next
+
+        Console.WriteLine(StrDup(80, "*"))
+
+        For i = 1 To 10
+            Console.WriteLine(i)
+        Next
+
+        Console.WriteLine(StrDup(80, "*"))
+
 
 
 
