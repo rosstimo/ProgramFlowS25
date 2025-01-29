@@ -88,11 +88,20 @@ Module ProgramFlowS25
         '    userInput = "q"
         'Loop Until userInput = "Q"
 
-        Do Until userInput = "Q"
-            Console.WriteLine("Type something and press enter:")
-            userInput = Console.ReadLine()
-            Console.WriteLine($"In the Do Until, Loop: ")
-        Loop
+        'Do Until userInput = "Q"
+        '    Console.WriteLine("Type something and press enter:")
+        '    userInput = Console.ReadLine()
+        '    Console.WriteLine($"In the Do Until, Loop: ")
+        'Loop
+
+
+        For i As Integer = 1 To 10 Step 1
+            Console.WriteLine(i)
+        Next
+
+        For i = 1 To 10 Step 0.5
+            Console.WriteLine(i)
+        Next
 
 
 
