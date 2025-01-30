@@ -1,43 +1,38 @@
-﻿
-Option Explicit On
+﻿Option Explicit On
 Option Strict On
 Option Compare Text
+
+Imports System.Net.Security
 
 Module ProgramFlowS25
 
     Sub Main()
         Dim firstNumber As Integer
-
-
-        Do
-            Console.WriteLine("In the first loop. Loop While firstNumber <= 3")
-            firstNumber += 1
-            Console.WriteLine($"FirstNumber is {firstNumber}!")
-        Loop While firstNumber <= 3
-
-        Console.WriteLine()
+        Dim getOutOfHere As Boolean = False
+        Dim userInput As String
 
         Do
-            Console.WriteLine("In the second loop. Loop While firstNumber <= 3")
-            firstNumber += 1
-            Console.WriteLine($"FirstNumber is {firstNumber}!")
-        Loop While firstNumber <= 3
+            Console.WriteLine("Enter a number")
+            Console.WriteLine("Enter Q to quit")
+            userInput = Console.ReadLine()
+            Console.WriteLine($"you entered {userInput}")
+            Try
+                firstNumber = CInt(userInput)
 
-        Console.WriteLine()
+            Catch ex As Exception
+                If userInput <> "Q" Then
+                    Console.WriteLine($"{userInput} is not whole number... :(  ")
+                End If
+            End Try
 
-        Do Until firstNumber >= 3
-            Console.WriteLine("In the third loop. Do Until firstNumber >= 3")
-            firstNumber += 1
-            Console.WriteLine($"FirstNumber is {firstNumber}!")
-        Loop
 
-        Do While firstNumber >= 3
-            Console.WriteLine("In the fourth loop. Do While firstNumber >= 3")
-            firstNumber -= 1
-            Console.WriteLine($"FirstNumber is {firstNumber}!")
-        Loop
 
-        Console.WriteLine()
+            ' Console.Clear()
+
+        Loop While userInput <> "Q"
+
+
+
 
     End Sub
 
