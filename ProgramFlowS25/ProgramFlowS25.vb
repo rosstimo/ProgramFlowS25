@@ -61,7 +61,25 @@ Module ProgramFlowS25
             'get user choice 
             'only runs if user has not already quit
             'run until valid choice or user quits
-
+            getOutOfHere = False
+            Do Until userInput = "Q" Or getOutOfHere = True
+                getOutOfHere = True
+                Select Case userInput
+                    Case "1"
+                        'do choice 1 stuff
+                    Case "2"
+                        'do choice 3 stuff
+                    Case "3"
+                        'do choice 3 stuff
+                    Case "4"
+                        'do choice 4 stuff
+                    Case "Q"
+                        'user has quit
+                    Case Else
+                        'invalid choice
+                        getOutOfHere = False
+                End Select
+            Loop
 
 
 
